@@ -1,5 +1,6 @@
 package com.haohao.double_the_happiness;
 
+import com.haohao.double_the_happiness.items.modCreativeTab;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -82,6 +83,7 @@ public class double_the_happiness
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
         moditems.register(modEventBus);
+        modCreativeTab.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in.
