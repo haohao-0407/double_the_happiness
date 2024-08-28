@@ -1,5 +1,9 @@
-package com.haohao.double_the_happiness.items;
-
+package com.haohao.double_the_happiness.datagen;
+import com.haohao.double_the_happiness.items.moditems;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.*;
 import org.slf4j.Logger;
 
@@ -31,14 +35,21 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-public class moditems {
 
-    public static final String MODID = "double_the_happiness";
-    public static final DeferredRegister.Items ITEMS=
-            DeferredRegister.createItems(MODID);
-    public static final DeferredItem<Item> FIRST_ITEM = ITEMS.registerSimpleItem("first_item",new Item.Properties()
-            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
-    public static void register(IEventBus eventBus){
-        ITEMS.register(eventBus);
+public class modItemModelGen extends ItemModelProvider {
+    public static final String GENERATED = "item/generated";
+    public static final String HANDHELD = "item/handheld";
+    public modItemModelGen(PackOutput output, ExistingFileHelper existingFileHelper){
+        super(output,"double_the_happiness",existingFileHelper);
     }
+
+    @Override
+    protected void registerModels() {
+        this.singleTexture("first_item",ResourceLocation
+                .withDefaultNamespace("item/generated")
+                ,"layer0"
+                ,ResourceLocation.fromNamespaceAndPath("double_the_happiness","item/"+"first_item"));
+
+    }
+
 }

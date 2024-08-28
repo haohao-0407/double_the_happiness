@@ -1,6 +1,5 @@
-package com.haohao.double_the_happiness.items;
-
-import net.neoforged.neoforge.registries.*;
+package com.haohao.double_the_happiness.datagen;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,15 +29,18 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-
-public class moditems {
-
-    public static final String MODID = "double_the_happiness";
-    public static final DeferredRegister.Items ITEMS=
-            DeferredRegister.createItems(MODID);
-    public static final DeferredItem<Item> FIRST_ITEM = ITEMS.registerSimpleItem("first_item",new Item.Properties()
-            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
-    public static void register(IEventBus eventBus){
-        ITEMS.register(eventBus);
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+@EventBusSubscriber(modid = "double_the_happiness",bus=EventBusSubscriber.Bus.MOD)
+public class DataGenerator {
+    @SubscribeEvent
+    public static void gatherData(GatherDataEvent event){
+        var gen =event.getGenerator();
+        var packOutput = gen.getPackOutput();
+        var helper = event.getExistingFileHelper();
+        var lookupProvider = event.getLookupProvider();
+        gen.addProvider(event.includeClient(), new modItemModelGen(packOutput, helper));
     }
 }

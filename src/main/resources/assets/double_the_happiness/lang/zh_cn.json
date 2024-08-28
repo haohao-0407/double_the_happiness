@@ -1,4 +1,4 @@
 {
-  "item.double_the_happiness.example_item": "测试物品",
-  "itemGroup.double_the_happiness": "双倍快乐！"
+  "item.double_the_happiness.first_item": "测试物品:掰开一半的面包！",
+  "creativetab.double_the_happiness_tab": "双倍快乐！"
 }
