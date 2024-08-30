@@ -49,6 +49,14 @@ public class modItemModelGen extends ItemModelProvider {
                 .withDefaultNamespace("item/generated")
                 ,"layer0"
                 ,ResourceLocation.fromNamespaceAndPath("double_the_happiness","item/"+"first_item"));
+        this.basicItem(moditems.HALVED_APPLE.get());
+        this.basicItem(moditems.HALVED_BEETROOT.get());
+        this.basicItem(moditems.HALVED_BAKED_POTATO.get());
+        this.basicItem(moditems.HALVED_CARROT.get());
+        this.basicItem(moditems.HALVED_CHORUS_FRUIT.get());
+        this.basicItem(moditems.HALVED_COOKED_CHICKEN.get());
+        this.basicItem(moditems.HALVED_COOKED_COD.get());
+
 
     }
 

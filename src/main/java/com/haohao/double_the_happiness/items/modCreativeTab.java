@@ -39,6 +39,13 @@ public class modCreativeTab {
         MOD_TAB = CREATIVE_MODE_TABS.register(MOD_TAB_STRING,() -> CreativeModeTab.builder().icon(()->new ItemStack(moditems.FIRST_ITEM.get()))
                 .title(Component.translatable(MOD_TAB_STRING)).displayItems(((itemDisplayParameters, output) -> {
                     output.accept(moditems.FIRST_ITEM.get());
+                    output.accept(moditems.HALVED_APPLE.get());
+                    output.accept(moditems.HALVED_BAKED_POTATO.get());
+                    output.accept(moditems.HALVED_BEETROOT.get());
+                    output.accept(moditems.HALVED_CARROT.get());
+                    output.accept(moditems.HALVED_CHORUS_FRUIT.get());
+                    output.accept(moditems.HALVED_COOKED_CHICKEN.get());
+                    output.accept(moditems.HALVED_COOKED_COD.get());
                 }))
                 .build());
 

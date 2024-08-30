@@ -38,6 +38,20 @@ public class moditems {
             DeferredRegister.createItems(MODID);
     public static final DeferredItem<Item> FIRST_ITEM = ITEMS.registerSimpleItem("first_item",new Item.Properties()
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_APPLE = ITEMS.registerSimpleItem("halved_apple",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_BAKED_POTATO = ITEMS.registerSimpleItem("halved_baked_potato",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_BEETROOT = ITEMS.registerSimpleItem("halved_beetroot",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_CARROT = ITEMS.registerSimpleItem("halved_carrot",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_CHORUS_FRUIT = ITEMS.registerSimpleItem("halved_chorus_fruit",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_COOKED_CHICKEN = ITEMS.registerSimpleItem("halved_cooked_chicken",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
+    public static final DeferredItem<Item> HALVED_COOKED_COD = ITEMS.registerSimpleItem("halved_cooked_cod",new Item.Properties()
+            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
