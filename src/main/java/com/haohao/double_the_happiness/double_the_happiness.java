@@ -35,6 +35,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import com.haohao.double_the_happiness.items.moditems;
+import com.haohao.double_the_happiness.blocks.modblocks;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(double_the_happiness.MODID)
@@ -69,6 +70,8 @@ public class double_the_happiness
         //CREATIVE_MODE_TABS.register(modEventBus);
         moditems.register(modEventBus);
         modCreativeTab.register(modEventBus);
+        modblocks.register(modEventBus);
+
 
 
         // Register ourselves for server and other game events we are interested in.

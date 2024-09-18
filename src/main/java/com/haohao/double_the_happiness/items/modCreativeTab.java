@@ -30,6 +30,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.haohao.double_the_happiness.blocks.modblocks;
 
 public class modCreativeTab {
     public static final String MOD_TAB_STRING = "creativetab.double_the_happiness_tab";
@@ -46,6 +47,7 @@ public class modCreativeTab {
                     output.accept(moditems.HALVED_CHORUS_FRUIT.get());
                     output.accept(moditems.HALVED_COOKED_CHICKEN.get());
                     output.accept(moditems.HALVED_COOKED_COD.get());
+                    output.accept(modblocks.INFUSER_ITEM.get());
                 }))
                 .build());
 
