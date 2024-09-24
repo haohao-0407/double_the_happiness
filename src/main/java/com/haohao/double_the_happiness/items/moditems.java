@@ -1,5 +1,11 @@
 package com.haohao.double_the_happiness.items;
 
+import com.haohao.double_the_happiness.items.custom.Infused_Sword;
+import com.haohao.double_the_happiness.items.custom.infused_axe;
+import com.haohao.double_the_happiness.items.custom.infused_pickaxe;
+import com.haohao.double_the_happiness.items.custom.infused_shovel;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
@@ -34,6 +40,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import com.haohao.double_the_happiness.items.component.friendshipComponent;
 
 import java.util.function.Supplier;
 
@@ -64,7 +71,8 @@ public class moditems {
     );
     public static final DeferredRegister.Items ITEMS=
             DeferredRegister.createItems(MODID);
-    public static final DeferredItem<Item> FIRST_ITEM = ITEMS.registerSimpleItem("first_item",new Item.Properties()
+    public static final DeferredRegister.DataComponents DATA_COMPONENTS=DeferredRegister.createDataComponents(MODID);
+        public static final DeferredItem<Item> FIRST_ITEM = ITEMS.registerSimpleItem("first_item",new Item.Properties()
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
     public static final DeferredItem<Item> HALVED_APPLE = ITEMS.registerSimpleItem("halved_apple",new Item.Properties()
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
@@ -80,25 +88,16 @@ public class moditems {
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
     public static final DeferredItem<Item> HALVED_COOKED_COD = ITEMS.registerSimpleItem("halved_cooked_cod",new Item.Properties()
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(2f).build()));
-    public static final Supplier<SwordItem> FRIENDNESS_INFUSED_SWORD = ITEMS.register("friendness_infused_sword", () -> new SwordItem(
-            // The tier to use.
-            friendness_infused_tier,
-            // The item properties. We don't need to set the durability here because TieredItem handles that for us.
-            new Item.Properties().attributes(
-                    // There are `createAttributes` methods in either the class or subclass of each DiggerItem
-                    SwordItem.createAttributes(
-                            // The tier to use.
-                            friendness_infused_tier,
-                            // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
-                            3,
-                            // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
-                            // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
-                            -2.4f
-                            )
-            )
-    ));
+    public static Supplier<SwordItem> INFUSED_SWORD = ITEMS.register("infused_sword", Infused_Sword::new);
+    public static Supplier<PickaxeItem> INFUSED_PICKAXE = ITEMS.register("infused_pickaxe", infused_pickaxe::new);
+    public static Supplier<ShovelItem> INFUSED_SHOVEL=ITEMS.register("infused_shovel", infused_shovel::new);
+    public static Supplier<AxeItem> INFUSED_AXE=ITEMS.register("infused_axe", infused_axe::new);
+    public static DeferredHolder<DataComponentType<?>, DataComponentType<friendshipComponent>> FRIENDSHIP_CONTENTS = DATA_COMPONENTS.registerComponentType(
+            "friendship_content", builder -> builder.persistent(friendshipComponent.CODEC).networkSynchronized(friendshipComponent.STREAM_CODEC).cacheEncoding()
+    );
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
+        DATA_COMPONENTS.register(eventBus);
     }
 }

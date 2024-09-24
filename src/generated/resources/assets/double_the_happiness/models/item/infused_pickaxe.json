@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "double_the_happiness:item/infused_pickaxe"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21	2024-08-30T19:40:16.2480061	Item Models: double_the_happiness
+// 1.21	2024-09-23T17:03:50.6474435	Item Models: double_the_happiness
 1eae8ddfa7c8f698ebe13a7d091021d27b00f3be assets/double_the_happiness/models/item/first_item.json
 eede16e3f3c735e045c2143c2fae6bd8a1cda49e assets/double_the_happiness/models/item/halved_apple.json
 a6407168716773709fa64e0e356b297b75dfef61 assets/double_the_happiness/models/item/halved_baked_potato.json
@@ -7,3 +7,8 @@ cb015157c967830b1a9c629a3a2bfe3241032cda assets/double_the_happiness/models/item
 4a472fbff80d6b5d7e97a8c4d935b72a38353d3d assets/double_the_happiness/models/item/halved_chorus_fruit.json
 4738cff78112a35d0ab30aa521d47660ebcbe3dd assets/double_the_happiness/models/item/halved_cooked_chicken.json
 5da27475221c3a3d417a8612149076b37330a59a assets/double_the_happiness/models/item/halved_cooked_cod.json
+094d051ec0197e13d554f97ce37f9586a49ae5a3 assets/double_the_happiness/models/item/infused_axe.json
+5844eb4b28018d57325d5f94e2c15411a4aa7246 assets/double_the_happiness/models/item/infused_pickaxe.json
+cde63e8a203cdb7edd916e147350e22f99c9f7f6 assets/double_the_happiness/models/item/infused_shovel.json
+569efbd5338fdd143202c46a0bf80ec6fffacd52 assets/double_the_happiness/models/item/infused_sword.json
+82a6f3f74affb0b3c43cdc4648c2ec15060bd941 assets/double_the_happiness/models/item/zetton.json

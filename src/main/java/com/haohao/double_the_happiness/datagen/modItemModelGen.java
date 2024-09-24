@@ -56,6 +56,11 @@ public class modItemModelGen extends ItemModelProvider {
         this.basicItem(moditems.HALVED_CHORUS_FRUIT.get());
         this.basicItem(moditems.HALVED_COOKED_CHICKEN.get());
         this.basicItem(moditems.HALVED_COOKED_COD.get());
+        this.basicItem(moditems.INFUSED_SWORD.get());
+        this.basicItem(moditems.INFUSED_AXE.get());
+        this.basicItem(moditems.INFUSED_PICKAXE.get());
+        this.basicItem(moditems.INFUSED_SHOVEL.get());
+
 
 
     }

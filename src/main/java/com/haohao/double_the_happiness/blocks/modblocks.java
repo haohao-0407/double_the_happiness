@@ -1,4 +1,6 @@
 package com.haohao.double_the_happiness.blocks;
+import net.minecraft.world.level.block.EnchantingTableBlock;
+import net.minecraft.world.level.block.TntBlock;
 import net.neoforged.neoforge.registries.*;
 import org.slf4j.Logger;
 
@@ -36,8 +38,10 @@ public class modblocks {
     public static final DeferredHolder<Block, Block> INFUSER;
     public static final DeferredHolder<Item, BlockItem> INFUSER_ITEM;
     static {
-        INFUSER = BLOCKS.register("infuser",() ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ENCHANTING_TABLE).requiresCorrectToolForDrops().strength(2F, 1.5F)));
+        INFUSER = BLOCKS.register("infuser",() ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ENCHANTING_TABLE).requiresCorrectToolForDrops()
+                .strength(2F, 1.5F)));
         INFUSER_ITEM = ITEMS.register("infuser",()->new BlockItem(INFUSER.get(),new Item.Properties()));
+
 
     }
     public static void register(IEventBus eventBus){

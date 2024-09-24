@@ -48,6 +48,11 @@ public class modCreativeTab {
                     output.accept(moditems.HALVED_COOKED_CHICKEN.get());
                     output.accept(moditems.HALVED_COOKED_COD.get());
                     output.accept(modblocks.INFUSER_ITEM.get());
+                    output.accept(moditems.INFUSED_SWORD.get());
+                    output.accept(moditems.INFUSED_PICKAXE.get());
+                    output.accept(moditems.INFUSED_SHOVEL.get());
+                    output.accept(moditems.INFUSED_AXE.get());
+
                 }))
                 .build());
 
