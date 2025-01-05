@@ -1,9 +1,9 @@
 {
   "item.double_the_happiness.first_item": "1",
   "creativetab.double_the_happiness_tab": "双倍快乐！",
-  "message.double_the_happiness.creator.success": "制作者：%s",
+  "message.double_the_happiness.creator.success": "注入了%s的友谊之力!",
   "message.double_the_happiness.creator.same": "请交给朋友！",
-  "message.double_the_happiness.friend.success": "来自%s",
+  "message.double_the_happiness.friend.success": "获得来自%s的友谊之力!",
   "item.double_the_happiness.infused_sword": "友谊之剑",
   "item.double_the_happiness.infused_pickaxe": "友谊之镐",
   "item.double_the_happiness.infused_axe": "友谊之斧",

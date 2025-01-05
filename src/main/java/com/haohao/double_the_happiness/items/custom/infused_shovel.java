@@ -62,10 +62,10 @@ public class infused_shovel extends ShovelItem {
                         // The tier to use.
                         moditems.friendness_infused_tier,
                         // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
-                        3,
+                        1.5f,
                         // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
                         // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
-                        -2.4f
+                        -3.0f
                 )));
     }
     @Override
